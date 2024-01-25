@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Decodificador</title>
-  </head>
-  <body>
-    <header class="header">
-      <img class="header-img" src="/assets/logo.png" alt="logo da página">
-    </header>
-    <main class="main">
-      <div class="warning">
-        <img class="warning-img" src="/assets/warning.svg" alt="Imagem de atenção">
-        <p class="warning-text">Apenas letras minúsculas e sem acento.</p>
-      </div>
-      <textarea></textarea>
-      <button class="main-button" type="button">
-        <img src="/assets/encrypt.svg" alt="Imagem de um cadeado fechado">
-        Criptografar
-      </button>
-      <button class="main-button" type="button">
-        <img src="/assets/descrypt.svg" alt="Imagem de um cadeado fechado">
-        Descriptografar
-      </button>
-    </main>
-    <aside class="aside">
-      <input class="aside-checkbox" type="checkbox" type="checkbox" name="checkbox">
-      <div>
-        <img class="aside-icon-theme" src="/assets/sun.svg" alt="">
-        <img class="aside-icon-theme" src="/assets/moon.svg" alt="">
-        <label for="checkbox" class="aside-circle"></label>
-      </div>
-      <section>
-        <img class="aside-img" src="/assets/High quality products 1 1.svg" alt="">
-        <div class="aside-msg">
-          <h2>Nenhuma mensagem encontrada</h2>
-          <p>Digite um texto que vocẽ deseja Criptografar ou Descriptografar.</p>
-        </div>
-      </section>
-      <button class="aside-button">
-        <img src="/assets/copy.svg" alt="Imagem de uma prancheta">
-        Copiar
-      </button>
-    </aside>
-    <footer>
-      Álisson Santana © All rights reserved.
-    </footer>
-
-    <script src="/script.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decodificador</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body class="body">
+        <section>
+            <img src="assets/LogoAlura.svg" alt="Logo da página" id="Logo">
+        </section>
+        <main class="main">
+            <section class="section_texto_descriptografado">
+                <textarea class="input" id="input" placeholder="Digite seu texto"></textarea>
+                <div class="div_aviso_btn">
+                    <p class="paragrafo_aviso"><img src="assets/warning.svg" alt="Aviso">Apenas letras minúsculas e sem acento.</p>
+                    <div class="div_texto_descriptografado_btn">
+                        <button onclick="criptografar()" class="btn-blue">Criptografar</button>
+                        <button onclick="descriptografar()" class="btn-white">Descriptografar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="mensagens">
+                <div class="mensagens_div">
+                    <img class="mensagens_div_img" src="assets/procurando.svg" alt="Procurando">
+                    <h2 class="mensagem_div_titulo">Nenhuma mensagem encontrada.</h2>
+                    <p class="mensagens_div_texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    <p class="resposta"></p>
+                    <button onclick="copiarTexto()" id="btn-copiar" hidden>Copiar texto</button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/%C3%A1lisson-santana/"><strong>Álisson Santana</strong></a></p>
+        </footer>
+        <script src="script.js" defer></script>
+    </body>
 </html>
