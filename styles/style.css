@@ -160,7 +160,7 @@ footer {
 }
 
 a {
-    color: black;
+    color: var(--terciary-color);
 }
 
 @media (max-width: 1800px) {
